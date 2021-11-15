@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 1250px;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: cadetblue;
+}
+
+a {
+  color: rgb(35, 149, 153);
+  text-decoration: none;
+  padding: 10px;
+}
+
+a:visited {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: blue;
+}
+
+.on {
+  color: azure;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.navbar {
+  background-color: rgb(161, 169, 184);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px;
+  position: fixed;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menu {
+  margin-top: 15px;
+}
+
+.menu .dropdown {
+  display: inline;
+}
+
+.features-menu {
+  display: none;
+}
+
+/*Below tells us that when dropdown is hovered upon, that the FEATURE-MENU should be restyled*/
+.dropdown:hover .features-menu {
+  display: flex; /*makes element inline*/
+  flex-direction: column; /*specifies the direction of flex - row or column*/
+  background-color: cyan;
+  border-radius: 5px;
+  padding-top: 50px;
+  position: absolute; /*takes it out of the code execution flow and makes it an independent element that can be place where ever we want using TOP & LEFT attribute*/
+  top: -15px;
+  left: -10px;
+  z-index: 1; /*to place it on a layer above/below other elements */
+}
+
+.features-menu li {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  padding: 20px;
+}
+
+.dropdown {
+  position: relative; /*zeros this element about its mother container MENU*/
+}
+
+.dropdown > span {
+  z-index: 2;
+  position: relative; /*zero positions this element about its mother container DROPDOWN*/
+  cursor: pointer;
+}
+
+img {
+    vertical-align: middle;
+    margin: 0 5px 0 5px;
+}
